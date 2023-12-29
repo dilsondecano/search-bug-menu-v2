@@ -389,6 +389,12 @@ margin-bottom: 30px
   height: auto;
   
 }
+
+
+ .cta ul li {
+  padding: 0px;
+}
+
  
 /* -----------------------LIST IMAGE---------------------------------  */ 
 .mega-links > li.sb-li-users, .mega-links > li.sb-li-phone, .mega-links > li.sb-li-envelope {
