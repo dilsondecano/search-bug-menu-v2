@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins&display=swap');
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+body {
+  background:#EDEDED
+}
+
+
+.navtopheader {
+  background-color: #FFFFFF;
+
+}
+
+.navtopheader .container {
+  display: flex;
+  background-color: #FFFFFF;
+  max-width: 1400px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-rightside .nav-rightside-ul {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cta ul li{
+  display: inline-flex;
+  list-style: none;
+  padding: 0 10px
+}
+
+.cta ul li a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav-rightside-ul li {
+  list-style: none;
+}
+
+.nav-rightside-ul > li > a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  padding: 9px 15px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  position: relative;
+  display: block;
+
+}
+
+.nav-rightside-ul > li > a:after {
+content: "";
+position: absolute;
+background-color: #EE8A1D;
+height: 5px;
+width: 0;
+left: 0;
+bottom: -10px;
+}
+
+.nav-rightside-ul > li > a:hover:after {
+  width: 100%;
+  }
+
+
+.nav-rightside-ul a:hover {
+ color: #EE8A1D;
+}
+
+.nav-rightside-ul a:hover::before {
+  width: 100%;
+  color: #EE8A1D;
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+ }
+
+.mega-box {
+  position: absolute;
+  top: 63px;
+  background: #FFFFFF;
+  width: 100%;
+  left: 0;
+  //visibility: hidden;
+  padding: 25px 20px 20px 0;
+  // opacity: 0;
+  display: none;
+
+  transition: all 0.9s ease-out;
+  transition: all 0.3s ease-in;
+}
+
+.mega-box.active {
+  display: block;
+  transition: 0.4s
+}
+
+.nav-rightside-ul li:hover .mega-box {
+  //opacity: 1;
+  /* visibility: visible; */
+  display: block;
+}
+
+
+.mega-box .content {
+  display: flex;
+  width: 100%;
+  padding: 25px 20px;
+  justify-content: space-between;
+}
+
+.content .row {
+  width: calc(25% - 30px);
+  
+}
+
+.cta ul li a button {
+  padding: 9px 25px;
+  background: #FFFFFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta ul li a {
+  font-weight: 700;
+}
+
+.mega-links > li {
+  margin: 30px 0;
+}
+
+
+
+.mega-links > li > h4 > a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.mega-links li p {
+  font-size: 14px;;
+}
+
+p > a {
+  color: #EE8A1D;
+  text-decoration: none;
+}
+
+p > a:hover {
+  
+  text-decoration: underline;
+}
+
+.mega-links > li > span > a {
+  text-decoration: none;
+  color: #EE8A1D;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mega-links > li > span > a:hover {
+  text-decoration: underline;
+}
+
+.mega-links > li > span {
+  
+  color: #EE8A1D;
+  font-size: 14px;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: #000000;
+}
+
+/* -----------------------LIST IMAGE---------------------------------  */ 
+
+
+.mega-links > li.sb-li-users, .mega-links > li.sb-li-phone, .mega-links > li.sb-li-envelope {
+  padding-left: 3rem;
+  padding-top: 6px;
+  background-repeat: no-repeat;  
+}
+
+.mega-links > li.sb-li-users {
+  background-image: url(user.png);
+
+}
+
+.mega-links > li.sb-li-phone {
+  background-image: url(phone.png);
+}
+
+.mega-links > li.sb-li-envelope {
+  background-image: url(envelope.png);
+}
+
+
+/*------------LOGIN SIGNUP------------*/
+
+button.dd-signup {
+  transition: all 0.4s ease;
+}
+
+button.dd-signup:hover {
+  background: #EE8A1D;
+  border-style: solid;
+  border-color: #EE8A1D;
+  color: #FFFFFF
+}
+
+/*------------FONT AWESOME------------*/
+
+.fa-solid, .fas {
+  color: #EE8A1D
+}
+
+/* -----------------------MEGA MENU TAB---------------------------------  */ 
+.dd-accordion-tab-wrapper, 
+.bc-accordion-tab-wrapper,
+.lu-accordion-tab-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.dd-accordion-tab-group .dd-tab,
+.bc-accordion-tab-group .bc-tab,
+.lu-accordion-tab-group .lu-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+  display: inline-block;
+
+}
+
+.dd-accordion-tab-group .dd-tab:hover,
+.bc-accordion-tab-group .bc-tab:hover,
+.lu-accordion-tab-group .lu-tab:hover {
+  //background: #EE8A1D;
+  color: #EE8A1D
+
+}
+
+#dd-one:checked ~ .dd-accordion-tab-group #dd-one-tab,
+#dd-two:checked ~ .dd-accordion-tab-group #dd-two-tab,
+#bc-one:checked ~ .bc-accordion-tab-group #bc-one-tab,
+#bc-two:checked ~ .bc-accordion-tab-group #bc-two-tab,
+#lu-one:checked ~ .lu-accordion-tab-group #lu-one-tab,
+#lu-two:checked ~ .lu-accordion-tab-group #lu-two-tab
+
+ {
+  background: #EE8A1D;
+  color: #FFFFFF;
+}
+
+.dd-accordion-tab-wrapper input[type="radio"],
+.bc-accordion-tab-wrapper input[type="radio"],
+.lu-accordion-tab-wrapper input[type="radio"]
+{
+  display: none;
+}
+
+.dd-accordion-tab-contents .dd-accordion-tab-content,
+.bc-accordion-tab-contents .bc-accordion-tab-content,
+.lu-accordion-tab-contents .lu-accordion-tab-content {
+  display: none
+} 
+
+#dd-one:checked ~ .dd-accordion-tab-contents #dd-one-tab-content,
+#bc-one:checked ~ .bc-accordion-tab-contents #bc-one-tab-content,
+#lu-one:checked ~ .lu-accordion-tab-contents #lu-one-tab-content {
+  display: block;
+}
+
+#dd-two:checked ~ .dd-accordion-tab-contents #dd-two-tab-content,
+#bc-two:checked ~ .bc-accordion-tab-contents #bc-two-tab-content,
+#lu-two:checked ~ .lu-accordion-tab-contents #lu-two-tab-content {
+  display: block;
+}
+
+.dd-accordion-tab-contents .dd-accordion-tab-content .content,
+.bc-accordion-tab-contents .bc-accordion-tab-content .content,
+.lu-accordion-tab-contents .lu-accordion-tab-content .content{
+  display: flex;
+}
+
+.dd-accordion-tab-contents .dd-accordion-tab-content h3,
+.bc-accordion-tab-contents .bc-accordion-tab-content h3,
+.lu-accordion-tab-contents .lu-accordion-tab-content h3 {
+  color: #EE8A1D;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.dd-accordion-tab-contents .dd-accordion-tab-content .content .row .mega-links li,
+.bc-accordion-tab-contents .bc-accordion-tab-content .content .row .mega-links li,
+.lu-accordion-tab-contents .lu-accordion-tab-content .content .row .mega-links li {
+  list-style: none;
+}
+
+
+.dd-accordion-tab-contents,
+.bc-accordion-tab-contents,
+.lu-accordion-tab-contents
+  {
+  padding: 0 60px 60px 60px;
+}
+
+.dd-accordion-tab-group,
+.bc-accordion-tab-group,
+.lu-accordion-tab-group {
+margin-bottom: 30px
+}
+
+.dd-submenu-head,
+.bc-submenu-head,
+.lu-submenu-head {
+  border-bottom-style: solid;
+  border-bottom-color: #AAAAAA;
+  border-bottom-width: 2px;
+  padding-bottom: 20px;
+}
+
+.bulk-services-image, .api-services-image {
+  position: absolute;
+  left: 0;
+  bottom:0;
+
+}
+
+
+
+  .menu-button.sb-btn {
+    display: none;
+  }
+  .nav-rightside-ul .mobile-item {
+    display: none;
+  }
+
+  .nav-toggle {
+    cursor: pointer;
+    display: none;
+  }
+
+  i.fa-solid.fa-angle-down {
+    display: none;
+}
+
+.nav-rightside-ul li a:hover .fa-angle-down {
+  transition: all 0.2s ease-in;
+  transform: rotate(180deg);       
+}
+  
+
+/*------------MEDIA QUERIES------------*/
+
+
+
+/* Extra small devices (phones, 576px and down) */
+
+@media screen and (max-width: 576px) {
+
+
+/* -----------------------LIST IMAGE---------------------------------  */ 
+.mega-links > li.sb-li-users, .mega-links > li.sb-li-phone, .mega-links > li.sb-li-envelope {
+  
+  padding-left: 2rem;
+  
+  
+}
+
+.mega-links > li {
+  margin: 10px 0;
+}
+
+  i.fa-solid.fa-angle-down {
+    display: inline-block;
+}
+
+.mega-box {
+  padding: 0
+}
+  
+
+.dd-accordion-tab-group,
+.bc-accordion-tab-group,
+.lu-accordion-tab-group {
+margin-bottom: 0
+}
+
+.dd-submenu-head, .bc-submenu-head, .lu-submenu-head {
+  border-bottom-width: 1px;
+  padding-bottom: 9px;
+}
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menu-button.sb-btn {
+    display: block;
+  }
+
+  .nav-rightside-ul li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-rightside-ul > li > a:after {
+    content: "";
+    position: absolute;
+    background-color: #EE8A1D;
+    height: 0px;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    }
+    
+    
+    
+
+  .dd-accordion-tab-wrapper, .bc-accordion-tab-wrapper, .lu-accordion-tab-wrapper {
+    flex-direction: column;
+    
+  }
+
+  .bulk-services-image, .api-services-image {
+    display: none;
+  }
+
+  
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .navtopheader > .container > .nav-rightside > .nav-rightside-ul {
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    height: 100vh;
+    background: #FFFFFF;
+    display: block;
+    top: 65px;
+    left: -100%;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    
+  }
+
+  .navtopheader > .container > .nav-rightside > .nav-rightside-ul.active {
+    left: 0%;
+  }
+
+    .mega-links li p {
+    display: none;
+  }
+ 
+  .mega-box {
+    position: static;
+    background: #EDEDED;
+  }
+
+  .mega-box .content {
+    flex-direction: column;
+    padding: 12px
+  }
+  
+  .nav-rightside-ul > li > a {
+    padding: 0px;
+  }
+
+  .content .row {
+    width: 100%;
+  }
+
+ 
+  .dd-accordion-tab-contents .dd-accordion-tab-content h3, .bc-accordion-tab-contents .bc-accordion-tab-content h3, .lu-accordion-tab-contents .lu-accordion-tab-content h3 {
+    font-size: 22px;
+  }
+
+  .nav-rightside-ul.active {
+    left: 0%;
+
+  }
+  
+  #sb-menu-btn:checked ~ .nav-rightside-ul {
+    left: 0%;
+
+  }
+
+ 
+  .nav-rightside-ul li a {
+    padding: 12px;
+  }
+
+ .sb-btn {    
+    cursor: pointer;    
+  }
+
+  .mega-links li {
+    padding: 9px 5px;
+  }
+  
+  .dd-accordion-tab-contents,
+  .bc-accordion-tab-contents,
+  .lu-accordion-tab-contents
+    {
+    padding: 12px;
+  }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+
+  
+  
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .content .row {
+    width: 100%;
+    padding: 12px;
+    
+  }
+
+  .mega-box .content {
+    padding: 3px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+  
+  
+  
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {...}
