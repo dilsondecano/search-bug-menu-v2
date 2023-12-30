@@ -33,17 +33,10 @@ body {
   align-items: center;
 }
 
-
-.cta ul {
-  display: flex;
-  align-items: center;
-  gap: 20px
-}
-
 .cta ul li{
-  
+  display: inline-flex;
   list-style: none;
-  
+  padding: 0 10px
 }
 
 .cta ul li a{
@@ -201,7 +194,7 @@ p > a:hover {
   height: 3px;
   margin: 5px 0;
   transition: all 0.3s ease;
-  background-color: #EE8A1D;
+  background-color: #000000;
 }
 
 /* -----------------------LIST IMAGE---------------------------------  */ 
@@ -397,10 +390,6 @@ margin-bottom: 30px
   
 }
 
-.navtopheader .container {
-  max-width: calc(100% - 20px);
-}
-
 .cta ul li {
   padding: 0px;
 }
@@ -499,7 +488,6 @@ margin-bottom: 0
     left: -100%;
     transition: all 0.3s ease;
     overflow-y: auto;
-    padding: 12px
     
   }
 
@@ -546,7 +534,7 @@ margin-bottom: 0
 
  
   .nav-rightside-ul li a {
-    padding: 20px;
+    padding: 12px;
   }
 
  .sb-btn {    
@@ -569,7 +557,6 @@ margin-bottom: 0
     background: #FFFFFF;
     font-weight: 700;
     cursor: pointer;
-    border: solid 1px;
   }
 
 }
