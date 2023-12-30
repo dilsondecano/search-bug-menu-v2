@@ -36,7 +36,8 @@ body {
 .cta ul li{
   display: inline-flex;
   list-style: none;
-  padding: 0 10px
+  padding: 0 10px;
+  font-size: 16px;
 }
 
 .cta ul li a{
@@ -393,6 +394,11 @@ margin-bottom: 30px
 .cta ul li {
   padding: 0px;
 }
+
+.cta ul li a {
+  font-size: 15px;
+}
+
 /* -----------------------LIST IMAGE---------------------------------  */ 
 .mega-links > li.sb-li-users, .mega-links > li.sb-li-phone, .mega-links > li.sb-li-envelope {
   
@@ -534,7 +540,7 @@ margin-bottom: 0
 
  
   .nav-rightside-ul li a {
-    padding: 12px;
+    padding: 20px;
   }
 
  .sb-btn {    
