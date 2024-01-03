@@ -21,7 +21,8 @@ body {
 .navtopheader .container {
   display: flex;
   background-color: #FFFFFF;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1300px;
   margin: auto;
   align-items: center;
   justify-content: space-between;
@@ -90,30 +91,26 @@ bottom: -10px;
   height: 3px;
  }
 
+
+
 .mega-box {
   position: absolute;
-  top: 63px;
+  top: 65px;
   background: #FFFFFF;
   width: 100%;
   left: 0;
-  //visibility: hidden;
+  visibility: hidden;
   padding: 25px 20px 20px 0;
-  // opacity: 0;
-  display: none;
-
-  transition: all 0.9s ease-out;
+  opacity: 0;
   transition: all 0.3s ease-in;
 }
 
-.mega-box.active {
-  display: block;
-  transition: 0.4s
-}
+
 
 .nav-rightside-ul li:hover .mega-box {
-  //opacity: 1;
-  /* visibility: visible; */
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
 }
 
 
@@ -278,6 +275,16 @@ button.dd-signup:hover {
   color: #FFFFFF;
 }
 
+
+#dd-one:checked ~ .dd-accordion-tab-group #dd-one-tab .fa-angle-down,
+#dd-two:checked ~ .dd-accordion-tab-group #dd-two-tab .fa-angle-down,
+#bc-one:checked ~ .bc-accordion-tab-group #bc-one-tab .fa-angle-down,
+#bc-two:checked ~ .bc-accordion-tab-group #bc-two-tab .fa-angle-down,
+#lu-one:checked ~ .lu-accordion-tab-group #lu-one-tab .fa-angle-down,
+#lu-two:checked ~ .lu-accordion-tab-group #lu-two-tab .fa-angle-down {
+  color: #FFFFFF;
+}
+
 .dd-accordion-tab-wrapper input[type="radio"],
 .bc-accordion-tab-wrapper input[type="radio"],
 .lu-accordion-tab-wrapper input[type="radio"]
@@ -346,11 +353,36 @@ margin-bottom: 30px
   padding-bottom: 20px;
 }
 
-.bulk-services-image, .api-services-image {
+.bulk-services-image, 
+.api-services-image,
+.data-verification-image {
   position: absolute;
   left: 0;
   bottom:0;
+}
 
+.ssn-employment-search {
+  position: absolute;
+	left: 30px;
+  bottom:60px
+}
+
+.lookups-image {
+  position: absolute;
+	left: 0;
+  bottom:160px
+}
+
+.api-services-image {
+	position: absolute;
+	 left: 0;
+bottom:200px
+}
+
+.background-check-image {
+  position: absolute;
+	left: 30px;
+  bottom:200px
 }
 
 
@@ -358,16 +390,14 @@ margin-bottom: 30px
   .menu-button.sb-btn {
     display: none;
   }
-  .nav-rightside-ul .mobile-item {
-    display: none;
-  }
+
 
   .nav-toggle {
     cursor: pointer;
     display: none;
   }
 
-  i.fa-solid.fa-angle-down {
+i.fa-solid.fa-angle-down {
     display: none;
 }
 
@@ -375,7 +405,42 @@ margin-bottom: 30px
   transition: all 0.2s ease-in;
   transform: rotate(180deg);       
 }
-  
+
+
+
+
+
+.sb-people-search {
+  padding: 30px;
+  border-bottom-style: solid;
+  border-bottom-color: #AAAAAA;
+  border-bottom-width: 2px;
+  padding-bottom: 20px;
+}
+
+.sb-people-search > h4 {
+  color: #EE8A1D;
+  font-weight: bold;
+  font-size: 24px;
+  }
+
+
+  .bc-accordion-tab-contents, .dd-accordion-tab-contents {
+    padding-bottom: 120px;
+}
+
+#dd-one-tab > .fa-angle-down,
+#dd-two-tab > .fa-angle-down,
+#bc-one-tab > .fa-angle-down,
+#bc-two-tab > .fa-angle-down,
+#lu-one-tab > .fa-angle-down,
+#lu-two-tab > .fa-angle-down {
+  display: inline-block;
+  transform: rotate(-90deg);       
+}
+
+
+
 
 /*------------MEDIA QUERIES------------*/
 
@@ -383,7 +448,17 @@ margin-bottom: 30px
 
 /* Extra small devices (phones, 576px and down) */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
+
+
+.mega-box {
+  display: none;
+}
+
+.nav-rightside-ul li:hover .mega-box {
+  display: block;
+}
+  
 
 .navtopheader .container {
     padding: 0 6px;
@@ -412,11 +487,6 @@ margin-bottom: 30px
   i.fa-solid.fa-angle-down {
     display: inline-block;
 }
-
-.mega-box {
-  padding: 0 0 0 20px
-}
-  
 
 .dd-accordion-tab-group,
 .bc-accordion-tab-group,
@@ -456,7 +526,7 @@ margin-bottom: 0
   .nav-rightside-ul > li > a:after {
     content: "";
     position: absolute;
-    background-color: #EE8A1D;
+     background-color: #EE8A1D;
     height: 0px;
     width: 0;
     left: 0;
@@ -471,7 +541,13 @@ margin-bottom: 0
     
   }
 
-  .bulk-services-image, .api-services-image {
+  .bulk-services-image, 
+  .api-services-image,
+  .background-check-image,
+  .ssn-employment-search,
+  .data-verification-image,
+  .lookups-image
+ {
     display: none;
   }
 
@@ -490,6 +566,7 @@ margin-bottom: 0
     display: block;
     top: 65px;
     left: -100%;
+    
     transition: all 0.3s ease;
     overflow-y: auto;
     
@@ -497,7 +574,8 @@ margin-bottom: 0
 
   .navtopheader > .container > .nav-rightside > .nav-rightside-ul.active {
     left: 0%;
-  }
+   
+   }
 
     .mega-links li p {
     display: none;
@@ -506,6 +584,7 @@ margin-bottom: 0
   .mega-box {
     position: static;
     background: #EDEDED;
+    padding: 0 0 0 20px
   }
 
   .mega-box .content {
@@ -526,11 +605,7 @@ margin-bottom: 0
     font-size: 22px;
   }
 
-  .nav-rightside-ul.active {
-    left: 0%;
-
-  }
-  
+ 
   #sb-menu-btn:checked ~ .nav-rightside-ul {
     left: 0%;
 
@@ -577,16 +652,7 @@ margin-bottom: 0
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-  .content .row {
-    width: 100%;
-    padding: 12px;
-    
-  }
-
-  .mega-box .content {
-    padding: 3px;
-  }
-}
+ 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
