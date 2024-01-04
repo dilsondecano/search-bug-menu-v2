@@ -62,7 +62,7 @@ body {
 
 }
 
-.nav-rightside-ul > li > a:after {
+.nav-rightside-ul > li > div > a:after {
 content: "";
 position: absolute;
 background-color: #EE8A1D;
@@ -72,7 +72,7 @@ left: 0;
 bottom: -10px;
 }
 
-.nav-rightside-ul > li > a:hover:after {
+.nav-rightside-ul > li > div > a:hover:after {
   width: 100%;
   }
 
