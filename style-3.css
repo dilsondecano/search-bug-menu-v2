@@ -50,7 +50,7 @@ body {
   list-style: none;
 }
 
-.nav-rightside-ul > li > a {
+.nav-rightside-ul > li > div > a, .nav-rightside-ul > li > a {
   text-decoration: none;
   color: #000000;
   font-size: 16px;
@@ -184,7 +184,7 @@ p > a:hover {
 .hamburger {
   display: none;
   cursor: pointer
-}
+}  
 
 .bar {
   display: block;
@@ -392,7 +392,7 @@ bottom:200px
   }
 
 
-  .nav-toggle {
+.nav-toggle {
     cursor: pointer;
     display: none;
   }
@@ -401,14 +401,10 @@ i.fa-solid.fa-angle-down {
     display: none;
 }
 
-.nav-rightside-ul li a:hover .fa-angle-down {
+.nav-rightside-ul > li > div > a:hover ~ .fa-angle-down {
   transition: all 0.2s ease-in;
   transform: rotate(180deg);       
 }
-
-
-
-
 
 .sb-people-search {
   padding: 30px;
@@ -439,7 +435,12 @@ i.fa-solid.fa-angle-down {
   transform: rotate(-90deg);       
 }
 
-
+label#dd-one-tab, label#dd-two-tab, label#bc-one-tab, label#bc-two-tab, label#lu-one-tab, label#lu-two-tab {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 /*------------MEDIA QUERIES------------*/
@@ -450,9 +451,24 @@ i.fa-solid.fa-angle-down {
 
 @media screen and (max-width: 1200px) {
 
+  #look-ups, #bulk-api-services, #background-check-and-ssn, #people-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label#dd-one-tab, label#dd-two-tab, label#bc-one-tab, label#bc-two-tab, label#lu-one-tab, label#lu-two-tab {
+
+  width: 100%;
+
+}
 
 .mega-box {
   display: none;
+}
+
+.nav-rightside-ul > li {
+  padding: 0px 10px;
 }
 
 .nav-rightside-ul li:hover .mega-box {
@@ -475,7 +491,7 @@ i.fa-solid.fa-angle-down {
 /* -----------------------LIST IMAGE---------------------------------  */ 
 .mega-links > li.sb-li-users, .mega-links > li.sb-li-phone, .mega-links > li.sb-li-envelope {
   
-  padding-left: 2rem;
+  padding-left: 3rem;
   
   
 }
@@ -532,8 +548,7 @@ margin-bottom: 0
     left: 0;
     bottom: 0px;
     }
-    
-    
+   
     
 
   .dd-accordion-tab-wrapper, .bc-accordion-tab-wrapper, .lu-accordion-tab-wrapper {
@@ -593,7 +608,7 @@ margin-bottom: 0
   }
   
   .nav-rightside-ul > li > a {
-    padding: 0px;
+    padding: 9px 15px;
   }
 
   .content .row {
@@ -612,7 +627,7 @@ margin-bottom: 0
   }
 
  
-  .nav-rightside-ul li a {
+  . nav-rightside-ul li a {
     padding: 20px;
   }
 
