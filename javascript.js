@@ -17,12 +17,48 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-rightside-ul");
 
+const listMenu = document.querySelectorAll(".nav-rightside-ul > li");
+const listMenuDiv = document.querySelectorAll(".nav-rightside-ul > li > div:first-child");
+
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
     
 })
 
+listMenu.forEach(element => {
+    element.addEventListener("mouseover",() => {
+        element.classList.add("media-active");
+       
+        console.log("click")
+
+    }
+
+    );
+    
+});
+
+
+listMenu.forEach(element => {
+  element.addEventListener("mouseout",() => {
+      element.classList.remove("media-active");
+     
+      console.log("click")
+
+  }
+
+  );
+  
+});
+
+
+
+/* const bulkApiServices = document.getElementById("bulk-api-services");
+
+
+bulkApiServices.addEventListener("click", () => {
+    console.log(bulkApiServices)
+}); */
 
 /* $(document).ready(function(){
 
