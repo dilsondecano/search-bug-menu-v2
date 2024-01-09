@@ -33,6 +33,8 @@ body {
   display: inline-flex;
   align-items: center;
 }
+      
+/* -----------------------CTA LIST---------------------------------  */ 
 
 .cta ul li{
   display: inline-flex;
@@ -61,6 +63,9 @@ body {
   display: block;
 
 }
+
+
+/* -----------------------HOVER UNDERLINE ANIMATION---------------------------------  */ 
 
 .nav-rightside-ul > li > div > a:after {
 content: "";
@@ -92,6 +97,7 @@ bottom: -10px;
  }
 
 
+/* -----------------------MEGA BOX---------------------------------  */ 
 
 .mega-box {
   position: absolute;
@@ -406,8 +412,20 @@ i.fa-solid.fa-angle-down {
   transform: rotate(180deg);       
 }
 
+.nav-rightside-ul > li.media-active > div .fa-angle-down {
+  transition: all 0.3s ease-in;
+  transform: rotate(180deg);       
+  
+}
+
+.fa-angle-down {
+  transition: transform 0.5s ease-in
+}
+
+
+
 .sb-people-search {
-  padding: 0 30px;
+  padding: 0px 30px;
   border-bottom-style: solid;
   border-bottom-color: #AAAAAA;
   border-bottom-width: 2px;
@@ -447,9 +465,19 @@ label#dd-one-tab, label#dd-two-tab, label#bc-one-tab, label#bc-two-tab, label#lu
 
 
 
-/* Extra small devices (phones, 576px and down) */
+/* Extra small devices (phones, 1200x and down) */
 
 @media screen and (max-width: 1200px) {
+
+  .nav-rightside-ul > li > div > a:hover:after {
+    width: 0;
+    }
+  
+
+  .sb-people-search {
+      padding: 30px 0px;
+    }
+    
 
   #look-ups, #bulk-api-services, #background-check-and-ssn, #people-search {
     display: flex;
@@ -519,7 +547,7 @@ margin-bottom: 0
     display: block;
   }
 
-  .hamburger.active .bar:nth-child(1) {
+  .hamburger.active .bar:nth-child(1)  {
     transform: translateY(8px) rotate(45deg);
   }
 
